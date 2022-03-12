@@ -1,0 +1,52 @@
+
+#a
+{
+    grid-area: a;
+    background-color: blue;
+}
+#b
+{
+    grid-area: b;
+    background-color: brown;
+}
+#c
+{
+    grid-area: c;
+    background-color: aliceblue;
+}
+#d
+{
+    grid-area: d;
+    background-color: tomato;
+}
+#e
+{
+    grid-area: e;
+    background-color: aqua;
+}
+.GridColourLayout
+{
+    text-align: center;
+    display: grid;
+    background-color: black;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.7fr 0.2fr;
+    grid-template-areas:"a a b b" "c d d d" "e e e e";
+    height: 50vh;
+}    
+    
+    @media only screen and (max-width: 550px)
+    {
+        .GridColourLayout{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.6fr 0.6fr .6fr 0.6fr;
+            grid-template-areas: 
+            "a"
+            "b"
+            "c"
+            "d"
+            "e";
+    }
+}    
